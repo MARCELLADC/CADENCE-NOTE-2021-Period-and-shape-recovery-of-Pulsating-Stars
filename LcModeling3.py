@@ -76,36 +76,36 @@ def meanmag_antilog(mag):
 
 def computingLcModel(data,period,numberOfHarmonics,index,outDir):
     
+
     def modelToFit2_fit(coeff):
         fit = modelToFit(x,coeff)
         return (fit - y_proc)
+    
+    
+#    time_u=data['timeu']#time must be in days
+#    time_g=data['timeg']
+#    time_r=data['timer']
+#    time_i=data['timei']
+#    time_z=data['timez']
+#    time_y=data['timey']
+#    mag_u=data['magu']
+#    mag_g=data['magg']
+#    mag_r=data['magr']
+#    mag_i=data['magi']
+#    mag_z=data['magz']
 
-    time_u=data['timeu']#time must be in days
-    time_g=data['timeg']
-    time_r=data['timer']
-    time_i=data['timei']
-    time_z=data['timez']
-    time_y=data['timey']
-    mag_u=data['magu']
-    mag_g=data['magg']
-    mag_r=data['magr']
-    mag_i=data['magi']
-    mag_z=data['magz']
-    mag_y=data['magy']
-
-#if you want to do the fit only on non saturated visits put this
-#    time_u=data['timeu'][index['ind_notsaturated_u']]#time must be in days
-#    time_g=data['timeg'][index['ind_notsaturated_g']]
-#    time_r=data['timer'][index['ind_notsaturated_r']]
-#    time_i=data['timei'][index['ind_notsaturated_i']]
-#    time_z=data['timez'][index['ind_notsaturated_z']]
-#    time_y=data['timey'][index['ind_notsaturated_y']]
-#    mag_u=data['magu'][index['ind_notsaturated_u']]
-#    mag_g=data['magg'][index['ind_notsaturated_g']]
-#    mag_r=data['magr'][index['ind_notsaturated_r']]
-#    mag_i=data['magi'][index['ind_notsaturated_i']]
-#    mag_z=data['magz'][index['ind_notsaturated_z']]
- #   mag_y=data['magy'][index['ind_notsaturated_y']]
+    time_u=data['timeu'][index['ind_notsaturated_u']]#time must be in days
+    time_g=data['timeg'][index['ind_notsaturated_g']]
+    time_r=data['timer'][index['ind_notsaturated_r']]
+    time_i=data['timei'][index['ind_notsaturated_i']]
+    time_z=data['timez'][index['ind_notsaturated_z']]
+    time_y=data['timey'][index['ind_notsaturated_y']]
+    mag_u=data['magu'][index['ind_notsaturated_u']]
+    mag_g=data['magg'][index['ind_notsaturated_g']]
+    mag_r=data['magr'][index['ind_notsaturated_r']]
+    mag_i=data['magi'][index['ind_notsaturated_i']]
+    mag_z=data['magz'][index['ind_notsaturated_z']]
+    mag_y=data['magy'][index['ind_notsaturated_y']] 
 
     
     parametersForLcFit=[period,1] # period,zp
